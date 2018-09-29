@@ -23,13 +23,22 @@ class Counter extends Component {
     fontWeight: 'bold'
   };
 
+  handleIncrement() {
+    console.log('Increment Clicked', this);
+  }
+
   render() {
     return (
       <div>
         <span style={this.styles} className={this.getBadgeClasses()}>
           {this.formatCount()}
         </span>
-        <button className="btn btn-secondary btn-sm">Increment</button>
+        <button
+          onClick={this.handleIncrement}
+          className="btn btn-secondary btn-sm"
+        >
+          Increment
+        </button>
         {this.renderTags()}
       </div>
     );
