@@ -6,6 +6,11 @@ class Counter extends Component {
     fontWeight: 'bold'
   };
 
+  componentDidUpdate(prevProps, prevState) {
+    console.log('prevProps', prevProps);
+    console.log('prevState', prevState);
+  }
+
   render() {
     console.log('Counter - Rendered');
     return (
